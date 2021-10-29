@@ -1,2 +1,5 @@
 # Images
 /assets/images/
+
+# Spell checker local seettings
+.vscode/
