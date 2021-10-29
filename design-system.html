@@ -4,55 +4,163 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./assets/css/index.css" />
     <title>Design System</title>
   </head>
-  <body class="bg-dark text-white">
+  <body>
     <div class="container">
-      <h1 class="text-white">Design System</h1>
+      <h1 class="ff-serif uppercase">Design System</h1>
 
-      <section id="colors">
-        <h2><span>01</span> colors</h2>
+      <section id="colors" style="margin: 4rem 0">
+        <h2 class="uppercase" style="margin-bottom: 2rem">
+          <span>01 </span>colors
+        </h2>
 
         <div class="flex">
+          <div style="flex-grow: 1">
+            <div
+              class="bg-dark text-white fs-500"
+              style="
+                padding: 3rem 1rem 1rem;
+                border: 1px solid white;
+                margin-bottom: 1rem;
+              "
+            >
+              #0B0D17
+            </div>
 
-        <div>
-          <div
-            class="bg-dark text-white"
-            style="padding: 3rem 1rem 1rem; border: 1px solid white"
-          >
-            #0B0D17
+            <p><span class="text-accent">RGB</span> 11, 13, 23</p>
+            <p><span class="text-accent">HSL</span> 230°, 35%, 7%</p>
           </div>
 
-          <p><span class="text-accent">RGB</span> 11, 13, 23</p>
-          <p><span class="text-accent">HSL</span> 230°, 35%, 7%</p>
+          <div style="flex-grow: 1">
+            <div
+              class="bg-accent text-dark fs-500"
+              style="
+                padding: 3rem 1rem 1rem;
+                border: 1px solid white;
+                margin-bottom: 1rem;
+              "
+            >
+              #D0D6F9
+            </div>
+            <p><span class="text-accent">RGB</span> 208, 214, 249</p>
+            <p><span class="text-accent">HSL</span> 231°, 77%, 90%</p>
+          </div>
+
+          <div style="flex-grow: 1">
+            <div
+              class="bg-white text-dark fs-500"
+              style="
+                padding: 3rem 1rem 1rem;
+                border: 1px solid white;
+                margin-bottom: 1rem;
+              "
+            >
+              #FFFFFF
+            </div>
+
+            <p><span class="text-accent">RGB</span> 255, 255, 255</p>
+            <p><span class="text-accent">HSL</span> 0°, 0%, 100%</p>
+          </div>
         </div>
+      </section>
 
-        <div>
-          <div
-            class="bg-accent text-dark"
-            style="padding: 3rem 1rem 1rem; border: 1px solid white"
-          >
-            #D0D6F9
+      <section id="typography">
+        <h2 class="uppercase" style="margin-bottom: 2rem">
+          <span>02 </span>Typography
+        </h2>
+
+        <div class="flex">
+          <div style="flex-basis: 100%">
+            <div>
+              <p>Heading 1 - Bellefair Regular - 150px</p>
+              <p>Earth</p>
+            </div>
+
+            <div>
+              <p>Heading 2 - Bellefair Regular - 100px</p>
+              <p>Venus</p>
+            </div>
+
+            <div>
+              <p>Heading 3 - Bellefair Regular - 56px</p>
+              <p>Jupiter & Saturn</p>
+            </div>
+
+            <div>
+              <p>Heading 4 - Bellefair Regular - 32px</p>
+              <p>Uranus, Neptune & Pluto</p>
+            </div>
+
+            <div>
+              <p>
+                Heading 5 - Barlow Condensed Regular - 28px - 4.75 Character
+                Space
+              </p>
+              <p>So, you want to travel to space</p>
+            </div>
           </div>
-          <p><span class="text-accent">RGB</span> 208, 214, 249</p>
-          <p><span class="text-accent">HSL</span> 231°, 77%, 90%</p>
-        </div>
 
-        <div>
-          <div
-            class="bg-white text-dark"
-            style="padding: 3rem 1rem 1rem; border: 1px solid white"
-          >
-            #FFFFFF
+          <div style="flex-basis: 100%">
+            <div>
+              <p>Subheading 1 - Bellefair Regular - 28px</p>
+              <p>384,400 km</p>
+            </div>
+
+            <div>
+              <p>
+                Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character
+                Space
+              </p>
+              <p>Avg. Distance</p>
+            </div>
+
+            <div>
+              <p>
+                Nav Text - Barlow Condensed Regular - 16px - 2.7 Character Space
+              </p>
+              <p>Europa</p>
+            </div>
+
+            <div>
+              <p>Body Text</p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+                repellat quaerat dignissimos itaque explicabo repudiandae
+                architecto voluptates non nesciunt, facilis similique veniam
+                harum? Dicta sequi perferendis perspiciatis facilis dolorum, ad
+                provident sed qui mollitia delectus voluptas iusto, reiciendis
+                aut dolores ea reprehenderit dolorem corporis numquam pariatur
+                amet adipisci nam eos minima recusandae? Necessitatibus culpa
+                corrupti mollitia enim delectus id quidem. Quibusdam quas
+                ratione tempora porro praesentium assumenda illum. Illum dolor
+                voluptatem eos molestias optio minima, tenetur excepturi velit
+                corporis nobis tempore nemo dolores repudiandae molestiae sunt a
+                obcaecati neque. Omnis pariatur nemo rerum. Rerum adipisci est
+                doloribus a blanditiis ducimus soluta eaque odio amet numquam?
+                Nulla, voluptatum molestias? Ducimus, mollitia unde! Doloribus a
+                voluptas in consequatur quam mollitia ullam, nemo voluptatibus
+                harum possimus magni officia aspernatur, quia cumque ad
+                dignissimos error, inventore nulla ut! Provident quod aut
+                facilis dicta ducimus eveniet distinctio aliquid sed repellat
+                nobis. Earum voluptatibus magnam pariatur.
+              </p>
+            </div>
           </div>
-
-          <p><span class="text-accent">RGB</span> 255, 255, 255</p>
-          <p><span class="text-accent">HSL</span> 0°, 0%, 100%</p>
         </div>
       </section>
     </div>
-  </div>
     <script src="./assets/js/index.js"></script>
   </body>
 </html>
