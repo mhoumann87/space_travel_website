@@ -9,12 +9,12 @@
   --clr-white: 0 0% 100%;
 
   /* font-sizes */
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
   --fs-500: 1.75rem;
-  --fs-400: 1.25rem;
+  --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
 
@@ -22,6 +22,28 @@
   --ff-serif: 'Bellefair', serif;
   --ff-sans-cond: 'Barlow Condensed', sans-serif;
   --ff-sans-normal: 'Barlow', sans-serif;
+}
+
+/* Font sizes for different screen sizes, with custom properties */
+
+/* Tablet */
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 45em) {
+  :root {
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-400: 1.25rem;
+  }
 }
 
 /* ===================== */
@@ -71,6 +93,8 @@ body {
   color: hsl(var(--clr-white));
   line-height: 1.5;
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 input,
@@ -109,6 +133,10 @@ select {
   gap: var(--gap, 1rem);
 }
 
+.d-block {
+  display: block;
+}
+
 /* spacing */
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
@@ -123,20 +151,38 @@ select {
 
 /* A container with 2 columns and placement of the 2 columns */
 .grid-container {
+  text-align: center;
   display: grid;
-  column-gap: var(--container-gap, 2rem);
-  grid-template-columns:
-    minmax(2em, 1fr)
-    repeat(2, minmax(0, 40rem))
-    minmax(2em, 1fr);
+  place-items: center;
+  padding-inline: 1rem;
 }
 
-.grid-container > *:first-child {
-  grid-column: 2;
+.grid-container * {
+  max-width: 50ch;
 }
 
-.grid-container > *:last-child {
-  grid-column: 3;
+@media (min-width: 45em) {
+  .grid-container {
+    text-align: left;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns:
+      minmax(2em, 1fr)
+      repeat(2, minmax(0, 40rem))
+      minmax(2em, 1fr);
+  }
+
+  .grid-container > *:first-child {
+    grid-column: 2;
+  }
+
+  .grid-container > *:last-child {
+    grid-column: 3;
+  }
+
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
+  }
 }
 
 /* Class for content not to be shown, but read by screen readers */
@@ -290,6 +336,7 @@ select {
 /* Call to action button */
 
 .large-button {
+  font-size: 2rem;
   position: relative;
   z-index: 1;
   display: inline-grid;
