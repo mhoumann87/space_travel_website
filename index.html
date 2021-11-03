@@ -24,6 +24,8 @@
       href="./assets/images/favicon-32x32.png"
       type="image/x-icon"
     />
+
+    <script defer src="./assets/js/index.js"></script>
   </head>
   <body class="home">
     <header class="primary-header flex">
@@ -34,9 +36,21 @@
           class="logo"
         />
       </div>
-      <!-- 
+
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+
       <nav>
-        <ul class="primary-navigation underline-indicators flex">
+        <ul
+          id="primary-navigation"
+          class="primary-navigation underline-indicators flex"
+          data-visible="false"
+        >
           <li class="active">
             <a
               href="./index.html"
@@ -69,7 +83,7 @@
             >
           </li>
         </ul>
-      </nav> -->
+      </nav>
     </header>
 
     <main class="grid-container grid-container--home">
