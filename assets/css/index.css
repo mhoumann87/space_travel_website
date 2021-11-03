@@ -417,3 +417,31 @@ select {
   color: hsl(var(--clr-dark));
   border-color: hsl(var(--clr-white));
 }
+
+/* ===================== */
+/* Pages background                */
+/* ===================== */
+
+body {
+  background-position: bottom center;
+  background-size: cover;
+}
+
+/* home page */
+
+.home {
+  background-image: url('../images/home/background-home-mobile.jpg');
+}
+
+@media (min-width: 35em) {
+  .home {
+    background-position: center center;
+    background-image: url('../images/home/background-home-tablet.jpg');
+  }
+}
+
+@media (min-width: 45em) {
+  .home {
+    background-image: url('../images/home/background-home-desktop.jpg');
+  }
+}
