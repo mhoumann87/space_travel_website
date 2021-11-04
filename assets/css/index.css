@@ -199,6 +199,21 @@ select {
   border: 0;
 }
 
+/* link to main content - only showed when it is in focus */
+.skip-to-content {
+  position: absolute;
+  z-index: 99;
+  color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-white));
+  padding: 0.5em 1em;
+  transform: translateY(-100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
 /* Colors */
 
 .bg-dark {
@@ -557,5 +572,23 @@ body {
 @media (min-width: 45em) {
   .home {
     background-image: url('../images/home/background-home-desktop.jpg');
+  }
+}
+
+/* Destination page */
+
+.destination {
+  background-image: url('../images/destination/background-destination-mobile.jpg');
+}
+
+@media (min-width: 35em) {
+  .destination {
+    background-image: url('../images/destination/background-destination-tablet.jpg');
+  }
+}
+
+@media (min-width: 45em) {
+  .destination {
+    background-image: url('../images/destination/background-destination-desktop.jpg');
   }
 }
