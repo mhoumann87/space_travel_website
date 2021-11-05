@@ -191,6 +191,10 @@ select {
   background-color: hsl(var(--clr-white));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .text-dark {
   color: hsl(var(--clr-dark));
 }
@@ -525,7 +529,7 @@ select {
   padding-bottom: 3rem;
 }
 
-.grid-container * {
+.grid-container p:not([class]) {
   max-width: 50ch;
 }
 
@@ -621,7 +625,7 @@ select {
 
   .destination-meta {
     justify-content: start;
-    --gap: 6rem;
+    --gap: min(6vw, 6rem);
   }
 }
 
