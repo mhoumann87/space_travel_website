@@ -537,12 +537,16 @@ select {
   grid-area: title;
 }
 
-/* pace specific layout */
+/* page specific layout */
+
+/* front-page*/
 
 .grid-container--home {
   --flow-space: 2rem;
   padding-top: 2rem;
 }
+
+/* destination pages */
 
 .grid-container--destination {
   --flow-space: 2rem;
@@ -580,12 +584,48 @@ select {
   font-size: 1.75rem;
 }
 
-@media (min-width: 35em) {
-  .numbered-title {
-    justify-self: start;
-    margin-top: 2em;
-  }
+/* crew pages */
+.grid-container--crew {
+  --flow-space: 2rem;
+  grid-template-areas:
+    'title'
+    'dots'
+    'image'
+    'content';
+}
 
+@media (min-width: 35em) {
+  .grid-container--crew {
+    grid-template-areas:
+      'title'
+      'content'
+      'dots'
+      'image';
+  }
+}
+
+@media (min-width: 45em) {
+  .grid-container--crew {
+    grid-template-areas:
+      '.title title.'
+      '.content image'
+      '.dots image.';
+  }
+}
+
+.grid-container--crew > .content {
+  grid-area: content;
+}
+
+.grid-container--crew > .dot-indicators {
+  grid-area: dots;
+}
+
+.grid-container--crew > img {
+  grid-area: image;
+}
+
+@media (min-width: 35em) {
   .destination-meta {
     flex-direction: row;
     justify-content: space-evenly;
