@@ -702,6 +702,23 @@ select {
   border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
 }
 
+/* technology pages */
+
+.grid-container--technology {
+  grid-template-areas:
+    'title'
+    'image'
+    'indicators'
+    'content';
+}
+
+.grid-container--technology > img {
+  grid-area: image;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
 /* ===================== */
 /* Pages background      */
 /* ===================== */
